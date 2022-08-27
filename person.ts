@@ -21,6 +21,6 @@ export class Person {
   }
 
   getBirthdayYear() {
-    return;
+    return this.age;
   }
 }
