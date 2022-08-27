@@ -1,11 +1,16 @@
-// Import stylesheets
-import './style.css';
-import { Person } from 'person.ts';
+import { Person } from './person.ts';
 
-// Write TypeScript code!
+let person = new Person('Vivian', 'da', 'Cunha', 47);
+
 const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
-
-let person = new Person('a', 'b', 'c', '1');
-const appDiv1: HTMLElement = document.getElementById('app.fullname');
-appDiv1.innerHTML = `<p>${Person.getFullName()}r</p>`; 
+appDiv.innerHTML = `
+<h1>Classes com Typescript</h1>
+<h2>Nome completo: ${person.getFullName()}</h2>
+<h2>Nasceu no ano: ${person.getBirthdayYear()}</h2>
+<h3>Emails: </h3>
+<ul>
+  <li>${person.emails[0]}</li>
+  <li>${person.emails[1]}</li>
+  <li>${person.emails[2]}</li>
+</ul>
+`;

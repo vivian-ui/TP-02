@@ -1,26 +1,31 @@
 export class Person {
-  firstname: string;
-  middlename: string;
-  lastname: string;
+  firstName: string;
+  middleName: string;
+  lastName: string;
   age: number;
+  emails: Array<string> = [
+    'fulano@gmail.com',
+    'euclides@hotmail.com',
+    'pedro@fatec.sp.gov.br',
+  ];
 
   constructor(
-    firstname: string,
-    middlename: string,
-    lastname: string,
+    firstName: string,
+    middleName: string,
+    lastName: string,
     age: number
   ) {
-    this.firstname = firstname;
-    this.middlename = middlename;
-    this.lastname = lastname;
+    this.firstName = firstName;
+    this.middleName = middleName;
+    this.lastName = lastName;
     this.age = age;
   }
 
   getFullName() {
-    return 'Nome completo: ' + this.firstname + this.lastname;
+    return this.firstName + ' ' + this.middleName + ' ' + this.lastName;
   }
 
   getBirthdayYear() {
-    return this.age;
+    return 2022 - this.age;
   }
 }
