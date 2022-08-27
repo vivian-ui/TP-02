@@ -1,4 +1,4 @@
-class Person {
+export class Person {
   firstname: string;
   middlename: string;
   lastname: string;
@@ -20,5 +20,7 @@ class Person {
     return 'Nome completo: ' + this.firstname + this.lastname;
   }
 
-  getBirthdayYear() {}
+  getBirthdayYear() {
+    return;
+  }
 }
